@@ -19,6 +19,7 @@ Visualization: For creating charts and graphs to present data insights.
 ### Data Transformation and Summarization 🔄
 #### Automated Data Selection:
 - Automatically selects the existing workbook for the current month. If the current month’s workbook is not available, it selects the existing data.
+- Created a custom scolumn which will update dynamically using M language function.
 #### Data Transformation in Power Query:
 - Performed necessary transformations using M language.
 - Summarized the data on a monthly level.
