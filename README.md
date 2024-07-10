@@ -6,10 +6,9 @@ This project involves automating the generation of a Shift Analysis Dashboard Re
 
 
 ## Objectives 🏆
-1. Automate the data transformation process.
-2. Summarize data at a monthly level.
-3. Create a separate view in Power Query.
-4. Perform analysis using advanced pivot table operations.
+1. Automated the data report process.
+2. Created a separate view in Power Query for summarized data at a monthly level.
+4. Performed analysis using advanced pivot table operations.
 5. Visualize the data with charts and graphs in a dashboard.
 ## Tools and Technologies 🛠️
 Excel: For data import, pivot tables, and visualizations.
