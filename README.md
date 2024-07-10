@@ -1,1 +1,40 @@
-# Shift-Analysis-Dashboard-Report-Automation
+# Shift Analysis Dashboard & Report Automation
+## Overview 🎯
+This project involves automating the generation of a Shift Analysis Dashboard Report in Excel. The automation process includes data transformation, calculations using M language in Power Query, and advanced pivot table operations to create charts and graphs for analysis.
+
+## Objectives 🏆
+1. Automate the data transformation process.
+2. Summarize data at a monthly level.
+3. Create a separate view in Power Query.
+4. Perform analysis using advanced pivot table operations.
+5. Visualize the data with charts and graphs in a dashboard.
+## Tools and Technologies 🛠️
+Excel: For data import, pivot tables, and visualizations.
+Power Query (M Language): For data transformation and summarization.
+Power Pivot: For advanced data analysis and calculations.
+Visualization: For creating charts and graphs to present data insights.
+## Project Details 📋 
+### Data Transformation and Summarization 🔄
+#### Automated Data Selection:
+- Automatically selects the existing workbook for the current month. If the current month’s workbook is not available, it selects the existing data.
+#### Data Transformation in Power Query:
+- Performed necessary transformations using M language.
+- Summarized the data on a monthly level.
+- Created a separate view within Power Query to streamline the data for further analysis.
+### Advanced Pivot Table Operations 📈
+#### Data Import to Excel:
+-Imported the transformed and summarized data into Excel.
+#### Pivot Table Analysis:
+- Utilized advanced pivot table operations to analyze the data.
+- Created dynamic charts and graphs to visualize the data trends and patterns.
+### Dashboard Creation 🖥️
+- Developed a comprehensive dashboard using the pivot table analysis.
+- Included various charts and graphs to provide clear and insightful data visualizations.
+- Ensured the dashboard updates automatically with the latest data.
+## Skills Utilized 🧠
+- Advanced Excel: For pivot table creation and data visualization.
+- Power Query (M Language): For data transformation and summarization.
+- Power Pivot: For advanced data analysis.
+- Visualization: For creating informative and dynamic charts and graphs.
+## Conclusion ✔️
+This Shift Analysis Dashboard Report Automation project enhances the efficiency and accuracy of shift data analysis by leveraging advanced Excel functionalities, Power Query with M language, and Power Pivot. The automated process ensures up-to-date and insightful reporting, enabling better decision-making based on comprehensive data analysis.
