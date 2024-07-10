@@ -11,10 +11,10 @@ This project involves automating the process of data reporting and a Dashboard i
 4. Performed analysis using advanced pivot table operations.
 5. Visualize the data with charts and graphs in a dashboard.
 ## Tools and Technologies 🛠️
-Excel: For data import, pivot tables, and visualizations.
-Power Query (M Language): For data transformation and summarization.
-Power Pivot: For advanced data analysis and calculations.
-Visualization: For creating charts and graphs to present data insights.
+- Excel: For data import, pivot tables, and visualizations.
+- Power Query (M Language): For data transformation and summarization.
+- Power Pivot: For advanced data analysis and calculations.
+- Visualization: For creating charts and graphs to present data insights.
 ## Project Details 📋 
 ### Data Transformation and Summarization 🔄
 #### Automated Data Selection:
