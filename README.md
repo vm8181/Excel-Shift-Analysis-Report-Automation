@@ -1,6 +1,6 @@
 # Shift Analysis Dashboard & Report Automation
 ## Overview 🎯
-This project involves automating the generation of a Shift Analysis Dashboard Report in Excel. The automation process includes data transformation, calculations using M language in Power Query, and advanced pivot table operations to create charts and graphs for analysis.
+This project involves automating the process of data reporting and a Dashboard in Excel. The automation process includes data transformation, calculations using M language in Power Query, and advanced pivot table operations to create charts and graphs for analysis.
 ![image](https://github.com/vm8181/Shift-Analysis-Dashboard-Report-Automation/assets/92555446/f52f4650-90e3-4cf5-af2f-9ae5671c4a05)
 
 
