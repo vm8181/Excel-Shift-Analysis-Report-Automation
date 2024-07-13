@@ -30,11 +30,13 @@ This project involves automating the process of data reporting and a Dashboard i
 - Power Query (M Language): For data transformation and summarization.
 - Power Pivot: For advanced data analysis and calculations.
 - Visualization: For creating charts and graphs to present data insights.
+- VBA(Visual Basic Application): Used VBA scripting to automate the renaming of worksheet.
 ## Project Details 📋 
 ### Data Transformation and Summarization 🔄
 #### Automated Data Selection:
 - Automatically selects the existing workbook for the current month. If the current month’s workbook is not available, it selects the existing data.
 - Created a custom scolumn which will update dynamically using M language function.
+- Used VBA code to automatically pick name from B1 cell to fulfill the client's requirement.
 #### Data Transformation in Power Query:
 - Performed necessary transformations using M language.
 - Summarized the data on a monthly level.
