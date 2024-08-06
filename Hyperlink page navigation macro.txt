@@ -1,0 +1,100 @@
+Sub CreateDailySheets()
+    Dim wsMaster As Worksheet
+    Dim wsNew As Worksheet
+    Dim rngDates As Range
+    Dim cell As Range
+    Dim dateValue As String
+    Dim tblHeader As Range
+    Dim tblData As Range
+    Dim sheetName As String
+    Dim counter As Integer
+    Dim tbl As ListObject
+
+    ' Set your master sheet
+    Set wsMaster = ThisWorkbook.Sheets("Master")
+    
+    ' Define the range for dates, table data, and header
+    Set rngDates = wsMaster.Range("A5:A" & wsMaster.Cells(wsMaster.Rows.Count, "A").End(xlUp).Row)
+    Set tblHeader = wsMaster.Range("J2:KZ3")
+    Set tblData = wsMaster.Range("D4:KZ84")
+    
+    ' Loop through each date in the range
+    For Each cell In rngDates
+        dateValue = cell.Value
+        sheetName = Format(dateValue, "d mmm")
+        
+        ' Ensure the sheet name is unique
+        counter = 1
+        Do While SheetExists(sheetName)
+            sheetName = Format(dateValue, "d mmm") & " (" & counter & ")"
+            counter = counter + 1
+        Loop
+        
+        ' Create a new sheet with the unique name
+        Set wsNew = ThisWorkbook.Sheets.Add(After:=ThisWorkbook.Sheets(ThisWorkbook.Sheets.Count))
+        wsNew.Name = sheetName
+        
+        ' Copy header and table data to new sheet
+        tblHeader.Copy Destination:=wsNew.Range("J2")
+        tblData.Copy Destination:=wsNew.Range("D4")
+        
+        ' Add Date column header and values
+        wsNew.Range("C4").Value = "Date"
+        wsNew.Range("C5:C84").Value = dateValue
+        
+        ' Apply formulas to dynamically link each row from the master, excluding J5:KZ84
+        Dim r As Integer
+        For r = 5 To 84
+            wsNew.Range("D" & r & ":I" & r).Formula = "=Master!" & wsMaster.Range("D" & r & ":I" & r).Address
+        Next r
+
+        ' Resize the table range
+        On Error Resume Next ' Handle errors if no ListObjects are present
+        For Each tbl In wsNew.ListObjects
+            tbl.Resize wsNew.Range("$C$4:$KZ$84")
+        Next tbl
+        On Error GoTo 0 ' Reset error handling
+
+        ' Freeze columns D to L
+        With wsNew
+            .Activate
+            .Range("M5").Select
+            .Application.ActiveWindow.FreezePanes = True
+        End With
+        
+        ' Add a "Back" button to navigate to the "Page Navigation" sheet
+        Dim backBtn As Shape
+        Set backBtn = wsNew.Shapes.AddShape(msoShapeRoundedRectangle, 10, 10, 100, 30) ' Adjust position and size as needed
+        With backBtn
+            .TextFrame.Characters.Text = "Back to Page Navigation"
+            .TextFrame.HorizontalAlignment = xlHAlignCenter
+            .TextFrame.VerticalAlignment = xlVAlignCenter
+            .OnAction = "GoToPageNavigation" ' Assign the macro
+        End With
+        
+        ' Add hyperlink to the "Back" button
+        wsNew.Hyperlinks.Add Anchor:=backBtn, Address:="", SubAddress:="'Page Navigation'!A1", TextToDisplay:="Back to Page Navigation"
+    Next cell
+End Sub
+
+' Function to check if a sheet name already exists
+Function SheetExists(sheetName As String) As Boolean
+    Dim ws As Worksheet
+    On Error Resume Next
+    Set ws = ThisWorkbook.Sheets(sheetName)
+    On Error GoTo 0
+    SheetExists = Not ws Is Nothing
+End Function
+
+' Macro to navigate to the "Page Navigation" sheet
+Sub GoToPageNavigation()
+    Dim ws As Worksheet
+    On Error Resume Next
+    Set ws = ThisWorkbook.Sheets("Page Navigation")
+    On Error GoTo 0
+    If Not ws Is Nothing Then
+        ws.Activate
+    Else
+        MsgBox "Page Navigation sheet does not exist.", vbExclamation
+    End If
+End Sub

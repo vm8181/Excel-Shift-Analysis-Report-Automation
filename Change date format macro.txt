@@ -1,0 +1,156 @@
+Sub ChangeDateFormat()
+    Dim ws As Worksheet
+    Dim dateRange As Range
+    Dim cell As Range
+    Dim sheetName As String
+    Dim isDateSheet As Boolean
+    
+    ' Loop through each worksheet in the workbook
+    For Each ws In ThisWorkbook.Worksheets
+        ' Get the sheet name
+        sheetName = ws.Name
+        
+        ' Check if the sheet name matches the date format (e.g., "1 Jan", "5 Mar", etc.)
+        If IsDateSheetName(sheetName) Then
+            ' Define the range containing the dates in the current worksheet
+            Set dateRange = ws.Range("C5:C84")
+            
+            ' Loop through each cell in the date range
+            For Each cell In dateRange
+                ' Check if the cell is not empty
+                If Not IsEmpty(cell.Value) Then
+                    ' Change the date format to dd-mm-yyyy
+                    cell.Value = Format(cell.Value, "dd-mm-yyyy")
+                End If
+            Next cell
+        End If
+    Next ws
+    
+    MsgBox "Date formats changed to dd-mm-yyyy successfully!"
+End Sub
+
+' Function to check if the sheet name is a date in the format "1 Jan", "5 Mar", etc.
+Function IsDateSheetName(sheetName As String) As Boolean
+    Dim dayPart As String
+    Dim monthPart As String
+    Dim spacePos As Integer
+    
+    ' Initialize the function to return False
+    IsDateSheetName = False
+    
+    ' Find the position of the space in the sheet name
+    spacePos = InStr(sheetName, " ")
+    
+    ' If there's no space, it's not a valid date sheet name
+    If spacePos = 0 Then Exit Function
+    
+    ' Extract the day part and the month part
+    dayPart = Left(sheetName, spacePos - 1)
+    monthPart = Mid(sheetName, spacePos + 1)
+    
+    ' Check if the day part is a valid number and the month part is a valid month
+    If IsNumeric(dayPart) And IsValidMonth(monthPart) Then
+        IsDateSheetName = True
+    End If
+End Function
+
+' Function to check if the month part is a valid month abbreviation (e.g., "Jan", "Feb", etc.)
+Function IsValidMonth(monthPart As String) As Boolean
+    Dim validMonths As Variant
+    Dim i As Integer
+    
+    ' List of valid month abbreviations
+    validMonths = Array("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
+    
+    ' Initialize the function to return False
+    IsValidMonth = False
+    
+    ' Loop through the list of valid months
+    For i = LBound(validMonths) To UBound(validMonths)
+        If monthPart = validMonths(i) Then
+            IsValidMonth = True
+            Exit Function
+        End If
+    Next i
+End Function
+---------------------------------------------------------------------------------------------------------------------------
+Sub ChangeDateFormat()
+    Dim ws As Worksheet
+    Dim dateRange As Range
+    Dim cell As Range
+    Dim sheetName As String
+    Dim monthNames As Variant
+    Dim monthName As Variant
+    Dim datePattern As String
+    
+    ' List of month names
+    monthNames = Array("Jan", "Feb", "Mar", "Apr", "May", "Jun", _
+                       "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
+    
+    ' Loop through each worksheet in the workbook
+    For Each ws In ThisWorkbook.Worksheets
+        sheetName = ws.Name
+        
+        ' Check if the sheet name matches the date format (e.g., "1 Jan")
+        If IsDateName(sheetName, monthNames) Then
+            ' Define the range containing the dates in the current worksheet
+            Set dateRange = ws.Range("C5:C84")
+            
+            ' Loop through each cell in the date range
+            For Each cell In dateRange
+                ' Check if the cell is not empty
+                If Not IsEmpty(cell.Value) Then
+                    ' Change the date format to dd-mm-yyyy
+                    cell.Value = Format(cell.Value, "dd-mm-yyyy")
+                End If
+            Next cell
+        End If
+    Next ws
+    
+    MsgBox "Date formats changed to dd-mm-yyyy successfully!"
+End Sub
+
+Function IsDateName(sheetName As String, monthNames As Variant) As Boolean
+    Dim parts() As String
+    Dim dayPart As String
+    Dim monthPart As String
+    
+    ' Check if the sheet name has at least 3 characters
+    If Len(sheetName) < 3 Then
+        IsDateName = False
+        Exit Function
+    End If
+    
+    ' Split the sheet name into day and month parts
+    parts = Split(sheetName, " ")
+    
+    ' Check if there are exactly 2 parts (day and month)
+    If UBound(parts) = 1 Then
+        dayPart = parts(0)
+        monthPart = parts(1)
+        
+        ' Check if the day part is a number and the month part is a valid month
+        If IsNumeric(dayPart) And IsMonth(monthPart, monthNames) Then
+            IsDateName = True
+        Else
+            IsDateName = False
+        End If
+    Else
+        IsDateName = False
+    End If
+End Function
+
+Function IsMonth(monthName As String, monthNames As Variant) As Boolean
+    Dim name As Variant
+    
+    ' Check if the monthName is in the list of monthNames
+    For Each name In monthNames
+        If monthName = name Then
+            IsMonth = True
+            Exit Function
+        End If
+    Next name
+    
+    IsMonth = False
+End Function
+
