@@ -16,7 +16,8 @@ This project involves automating the process of data reporting and a Dashboard i
 
 - **Visualization**.
 
-![image](https://github.com/vm8181/Shift-Analysis-Dashboard-Report-Automation/assets/92555446/f52f4650-90e3-4cf5-af2f-9ae5671c4a05)
+![image](https://github.com/user-attachments/assets/f217a314-af8e-460d-a6d1-b661e3aa763b)
+
 
 
 
