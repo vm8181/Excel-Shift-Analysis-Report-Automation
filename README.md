@@ -6,7 +6,7 @@ Automating the process of data reporting and a Dashboard in Excel. The automatio
   
 ![image](https://github.com/vm8181/Shift-Analysis-Dashboard-Report-Automation/assets/92555446/0af76531-1d6e-4639-a89e-5c8d5f0ac9b7)
 
-- **Consolidated Data by combining multiple tables in Power Query**.
+- **Consolidated Data by combining multiple Files in Power Query**.
 
 ![image](https://github.com/user-attachments/assets/d2070fc7-3c89-444b-96d7-04e2ffd21e2c)
 
