@@ -1,6 +1,6 @@
 # Shift Analysis Dashboard & Report Automation
 ## Overview 🎯
-This project involves automating the process of data reporting and a Dashboard in Excel. The automation process includes data transformation, calculations using M language in Power Query, VBA, and advanced pivot table operations to create charts and graphs for analysis.
+Automating the process of data reporting and a Dashboard in Excel. The automation process includes data transformation, calculations using M language in Power Query, VBA, and advanced pivot table operations to create charts and graphs for analysis.
 
 - **Raw Data**
   
@@ -8,18 +8,17 @@ This project involves automating the process of data reporting and a Dashboard i
 
 - **Consolidated Data by combining multiple tables in Power Query**.
 
-![image](https://github.com/vm8181/Shift-Analysis-Dashboard-Report-Automation/assets/92555446/d4cf1532-e422-41fd-8114-79cd3d5a1d77)
+![image](https://github.com/user-attachments/assets/d2070fc7-3c89-444b-96d7-04e2ffd21e2c)
+
 
 - **Automated Monthly report by taking the reference of consolidated data**.
 
-![image](https://github.com/vm8181/Shift-Analysis-Dashboard-Report-Automation/assets/92555446/bd3b62fb-1e7c-4562-9bf7-61d789b23eb5)
+![image](https://github.com/user-attachments/assets/b392c0f9-10bc-4e0c-81f4-e484b4543590)
+
 
 - **Visualization**.
 
-![image](https://github.com/user-attachments/assets/f217a314-af8e-460d-a6d1-b661e3aa763b)
-
-
-
+![image](https://github.com/user-attachments/assets/caee0453-3477-451a-a232-a14fb54290f9)
 
 ## Objectives 🏆
 1. Automated the data report process.
