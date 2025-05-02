@@ -1,7 +1,7 @@
 # 📊 Shift Analysis Dashboard & Report Automation
 
 ## 🎯 Overview
-This project automates the **shift data reporting and dashboard creation process** using **Microsoft Excel**, **Power Query (M Language)**, **Power Pivot**, and **VBA**. It includes data transformation, monthly consolidation, automated worksheet navigation, and insightful visualizations.
+This project automates the **shift data reporting and dashboard creation process** using **Microsoft Excel**, **Power Query (M Language)**, **Power Pivot**, and **Macro** & **VBA**. It includes data transformation, monthly consolidation, automated worksheet navigation, and insightful visualizations.
 
 ---
 
@@ -43,7 +43,7 @@ This project automates the **shift data reporting and dashboard creation process
 - **Microsoft Excel** – Pivot tables, charts, and dashboard creation.
 - **Power Query (M Language)** – Data transformation & dynamic column logic.
 - **Power Pivot** – Complex data modeling & measures.
-- **VBA (Visual Basic for Applications)** – Automate worksheet renaming and navigation buttons.
+- **Macro & VBA** – Automate worksheet renaming and navigation buttons.
 
 ---
 
@@ -53,7 +53,7 @@ This project automates the **shift data reporting and dashboard creation process
 
 - Dynamically selects the current month's workbook or defaults to the latest available.
 - Created custom columns that update dynamically using **M language**.
-- Used **VBA** to implement:
+- Used **Macro & VBA** to implement:
   - Navigation buttons
   - Calendar-based jump functionality, click on date to go to that specific tab.
 
@@ -91,7 +91,7 @@ This project automates the **shift data reporting and dashboard creation process
 - **Excel Automation**
 - **Power Query (M Language)**
 - **Power Pivot**
-- **VBA Scripting**
+- **Macro & VBA Scripting**
 - **Interactive Visualizations**
 - **Dashboard Design & UX**
 
@@ -99,7 +99,7 @@ This project automates the **shift data reporting and dashboard creation process
 
 ## ✔️ Conclusion
 
-The **Shift Analysis Dashboard & Report Automation** project dramatically improves the efficiency of shift-based reporting. By combining Power Query, VBA, and Excel’s analytical tools, it delivers a **comprehensive, refreshable, and easy-to-navigate dashboard**, enabling better decision-making through data.
+The **Shift Analysis Dashboard & Report Automation** project dramatically improves the efficiency of shift-based reporting. By combining Power Query,Macro,  VBA, and Excel’s analytical tools, it delivers a **comprehensive, refreshable, and easy-to-navigate dashboard**, enabling better decision-making through data.
 
 ---
 
