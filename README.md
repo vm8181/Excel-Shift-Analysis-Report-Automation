@@ -16,7 +16,12 @@ Automating the process of data reporting and a Dashboard in Excel. The automatio
 ![image](https://github.com/user-attachments/assets/b392c0f9-10bc-4e0c-81f4-e484b4543590)
 
 
-- **Visualization**.
+- **Data Analysis & Pivoting**.
+
+![image](https://github.com/user-attachments/assets/bc6995a0-bd05-4447-b940-21ad3f9ab076)
+
+
+- **Microsoft Excel Dashboard**.
 
 ![image](https://github.com/user-attachments/assets/caee0453-3477-451a-a232-a14fb54290f9)
 
