@@ -15,13 +15,14 @@ This project automates the **shift data reporting and dashboard creation process
 
 - **Automated Monthly Reports**
   ![Monthly Report 1](https://github.com/user-attachments/assets/d48b1470-b5d3-4332-9b15-6695bc7817f4)
-  ![Monthly Report 2](https://github.com/user-attachments/assets/b392c0f9-10bc-4e0c-81f4-e484b4543590)
+  ![image](https://github.com/user-attachments/assets/d71ffbdf-5132-4e6f-82b6-c734131a5551)
 
 - **Interactive Calendar & Page Navigation**
   ![Calendar Navigation](https://github.com/user-attachments/assets/117a8fd1-fe61-4116-8a7d-f85635155f43)
 
 - **Data Analysis & Pivoting**
-  ![Pivot Analysis](https://github.com/user-attachments/assets/bc6995a0-bd05-4447-b940-21ad3f9ab076)
+![image](https://github.com/user-attachments/assets/414166f9-8cf9-42b2-b67d-97b3f94f6dc7)
+
 
 - **Final Excel Dashboard**
   ![Excel Dashboard](https://github.com/user-attachments/assets/caee0453-3477-451a-a232-a14fb54290f9)
