@@ -11,10 +11,13 @@ This project automates the **shift data reporting and dashboard creation process
   ![Raw Data](https://github.com/vm8181/Shift-Analysis-Dashboard-Report-Automation/assets/92555446/0af76531-1d6e-4639-a89e-5c8d5f0ac9b7)
 
 - **Data Consolidation via Power Query**
-  ![Consolidated Data](https://github.com/user-attachments/assets/d2070fc7-3c89-444b-96d7-04e2ffd21e2c)
+
+ ![image](https://github.com/user-attachments/assets/292b2ea4-8b9c-4e17-981b-94b07f956940)
 
 - **Automated Monthly Reports**
-  ![Monthly Report 1](https://github.com/user-attachments/assets/d48b1470-b5d3-4332-9b15-6695bc7817f4)
+
+  ![image](https://github.com/user-attachments/assets/5bc432e9-4155-42f7-8a5c-1a20b162699a)
+  
   ![image](https://github.com/user-attachments/assets/d71ffbdf-5132-4e6f-82b6-c734131a5551)
 
 - **Interactive Calendar & Page Navigation**
